@@ -24,8 +24,9 @@
       <th scope="row">{{$build->id}}</th>
       <td>{{$build->name}}</td>
       <td>{{$build->email}}</td>
-      <td>{{$build->phone}}</td>
       <td>{{$build->title}}</td>
+      <td>{{$build->phone}}</td>
+      
     </tr>
     @endforeach
   </tbody>
