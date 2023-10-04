@@ -62,28 +62,6 @@
   </div>
 </div>
 @endforeach
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">sn</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Title</th>
-      <th scope="col">Phone</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($build as $build)
-    <tr>
-      <th scope="row">{{$build->id}}</th>
-      <td>{{$build->name}}</td>
-      <td>{{$build->email}}</td>
-      <td>{{$build->phone}}</td>
-      <td>{{$build->title}}</td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-  
+
     </body>
 </html>
