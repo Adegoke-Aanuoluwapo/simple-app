@@ -19,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($build as $build)
+    @foreach($builds as $build)
     <tr>
       <th scope="row">{{$build->id}}</th>
       <td>{{$build->name}}</td>

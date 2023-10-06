@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadFile;
-use App\Models\builds;
+use App\Models\build;
 use Illuminate\Support\Facades\Facade;
 
 /*
@@ -28,14 +28,15 @@ Route::get('/upload', function () {
 });
 
 Route::POST('/upload', function(){
-    builds::create([
+    build::create([
         'email' => request('email'),
    'phone' => request('phone'),
   'title' => request('title'),
  'name' => request('name'),
   'location' => request('location'),
     'cv' => request('cv'),
-    
+    'updated_at' => request('updated_at'),
+    'created_at' => request('created_at'),
     ]);
    
     return redirect('/upload');
@@ -43,7 +44,7 @@ Route::POST('/upload', function(){
 
 });
 Route::get('/', function() {
-    $builds = DB::table('builds')->get();
+    $builds = DB::table('build')->get();
     return view('welcome', [
         'builds' => $builds
     ]);
