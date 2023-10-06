@@ -43,6 +43,7 @@
   <div class="col-12 shadow-sm bg-white p-2 d-flex mb-2 hr5">
     <div class="hr5" src="" width="100%" height="100%">
       <div class="px-2 content">
+        <h3>Build</h3>
           <p class="mb-1 fw600">{{$build->name}}</p>
           <p class="mb-1 text-cli">{{$build->title}}</p>
           <p class="mb-1 fw600">{{$build->phone}}</p>

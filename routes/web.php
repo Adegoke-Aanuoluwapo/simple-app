@@ -21,10 +21,15 @@ Route::get('/', function () {
     return view('welcome' );
 });
 Route::get('/admin', function () {
-    return view('admin');
+    $builds = DB::table('build')->get();
+    return view('admin', [
+        
+        'builds' => $builds
+
+    ]);
 });
 Route::get('/upload', function () {
-    return view('upload' );
+    return view('upload'  );
 });
 
 Route::POST('/upload', function(){
