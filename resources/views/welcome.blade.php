@@ -39,30 +39,42 @@
     </head>
 <body class="bg">
 <div class="row m-0 p-2">
-  @foreach($builds as $build)
+ 
   <div class="col-12 shadow-sm bg-white p-2 d-flex mb-2 hr5">
     <div class="hr5" src="" width="100%" height="100%">
       <div class="px-2 content">
         <h3>Build</h3>
-          <p class="mb-1 fw600">{{$build->name}}</p>
-          <p class="mb-1 text-cli">{{$build->title}}</p>
-          <p class="mb-1 fw600">{{$build->phone}}</p>
+          <p class="mb-1 fw600">This is a project to display some interested participants</p>
+          <p class="mb-1 text-cli"></p>
+          <p class="mb-1 fw600"></p>
 
           <div >
-            <p class="text-success mb-0 fw600 float-start">{{$build->location}}</p>
+            <p class="text-success mb-0 fw600 float-start"></p>
+             <p class="text-cl mb-0 fw600 float-end">2023</p>
+            
+          </div>
+          <div >
+             <div class="px-2 content">
+        <h3>Earn</h3>
+          <p class="mb-1 fw600">This project will give you a quantum leap in your finances</p>
+          <p class="mb-1 text-cli"></p>
+          <p class="mb-1 fw600"></p>
+
+          <div >
+            <p class="text-success mb-0 fw600 float-start"></p>
              <p class="text-cl mb-0 fw600 float-end">2023</p>
             
           </div>
           <div >
           
            
-             <button type="submit" class="text-cl mb-0 fw600 float-end"></button>
+            
           </div>
       </div>
     </div>
   </div>
 </div>
-@endforeach
+ <a type="submit" class="btn btn-primary " style="padding:15x" href="/upload"></a></
 
     </body>
 </html>
