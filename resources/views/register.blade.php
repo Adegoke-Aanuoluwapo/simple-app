@@ -62,22 +62,41 @@
                   </div>
                  @enderror
                 </div>
+             
                 <div class="form-group">
-                 <select class="form-control" placeholder="Your role *" name="title" value="{{old('title')}}" id="">
+                 <select class="text-lg border-1 "  style="width: 100%; height:50px" placeholder="Your role *" name="title" value="{{old('title')}}" id="">
                   <option value="">Please Select Role</option>
                 <option value="frontend">Frontend</option>
+                <option value="software engineer">Software Engineer</option>
+                 <option value="Product manager">Project Manager</option>
                  </select>
                  
-                 @error('name')
+                 @error('title')
                 <div class="form-error">
                    {{$message}}
                   </div>
                  @enderror
                 </div>
+                   <div class="form-group"><input class="form-control" placeholder="Your phone  *"name="location" value="{{old('location')}}">
+                 @error('location')
+                <div class="form-error">
+                   {{$message}}
+                  </div>
+                 @enderror
+                </div>
+                <div>
+    <label class="text-sm" for="year">Select Role</label>
+   <select class="text-lg border-1 " style="width: 100%; height:50px" type="text" id="title" name="title" value="{{old('title')}}">
+   <option>Select role</option>
+  <option value="Web Developer">Frontend Developer</option>
+   <option value="Software Developer">Software Developer</option>
+    <option value="Project Manager">Product designer</option>
+  </select>
+  </div>
              
-                <div class="form-group"><label class="text-body-small color-gray-500"><input class="chkbox" type="checkbox"> Agree to <a href="#">terms &amp; conditions</a></label></div>
+               
                 <div class="form-group"><button class="btn btn-green-full text-heading-6">Continue</button></div>
-                <div><span class="text-body-text color-gray-500">Already have an account?</span><a class="text-body-text color-green-900" href="page-login.html">Sign in now</a></div>
+                
               </div>
               </form>
             </div>
