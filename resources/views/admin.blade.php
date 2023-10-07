@@ -31,6 +31,7 @@
       <td>{{$build->phone}}</td>
       <td>{{$build->location}}</td>
       <td><a href="">{{$build->cv}}</a></td>
+       <td>{{$build->created_at}}</td>
      
     </tr>
     @endforeach

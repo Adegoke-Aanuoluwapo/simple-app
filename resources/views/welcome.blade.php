@@ -74,7 +74,7 @@
     </div>
   </div>
 </div>
- <a type="submit" class="btn btn-primary " style="padding:15x" href="/upload"></a></
+ <a type="submit" class="btn btn-primary " style="padding:5x" href="/upload"></a></
 
     </body>
 </html>

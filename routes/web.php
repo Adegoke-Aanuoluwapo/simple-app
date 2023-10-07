@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Facade;
 Route::get('/', function () {
     return view('welcome' );
 });
+Route::get('/home', function () {
+    return view('home' );
+});
 Route::get('/admin', function () {
     $builds = DB::table('build')->get();
     return view('admin', [
