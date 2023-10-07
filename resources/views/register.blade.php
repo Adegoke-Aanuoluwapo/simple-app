@@ -69,15 +69,14 @@
                 <option value="frontend">Frontend</option>
                 <option value="software engineer">Software Engineer</option>
                  <option value="Product manager">Project Manager</option>
-                 </select>
-                 
+                 </select>    
                  @error('title')
                 <div class="form-error">
                    {{$message}}
                   </div>
                  @enderror
                 </div>
-                   <div class="form-group"><input class="form-control" placeholder="Your phone  *"name="location" value="{{old('location')}}">
+                <div class="form-group"><input class="form-control" placeholder="Location  *"name="location" value="{{old('location')}}">
                  @error('location')
                 <div class="form-error">
                    {{$message}}
@@ -85,14 +84,14 @@
                  @enderror
                 </div>
                 <div>
-    <label class="text-sm" for="year">Select Role</label>
-   <select class="text-lg border-1 " style="width: 100%; height:50px" type="text" id="title" name="title" value="{{old('title')}}">
-   <option>Select role</option>
-  <option value="Web Developer">Frontend Developer</option>
-   <option value="Software Developer">Software Developer</option>
-    <option value="Project Manager">Product designer</option>
-  </select>
-  </div>
+                <div class="form-group"><input class="form-control" type="file" placeholder="Select a File  *" name="cv" value="{{old('cv')}}">
+                 @error('cv')
+                <div class="form-error">
+                   {{$message}}
+                  </div>
+                 @enderror
+                </div>
+                <div>
              
                
                 <div class="form-group"><button class="btn btn-green-full text-heading-6">Continue</button></div>
