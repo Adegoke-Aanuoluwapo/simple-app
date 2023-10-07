@@ -38,6 +38,14 @@ Route::get('/admin', function () {
 
     ]);
 });
+Route::get('/table', function () {
+    $builds = DB::table('build')->get();
+    return view('table', [
+
+        'builds' => $builds
+
+    ]);
+});
 Route::get('/upload', function () {
     return view('upload'  );
 });
