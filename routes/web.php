@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadFile;
 use App\Models\build;
+use App\Http\Controllers\Register;
 use Illuminate\Support\Facades\Facade;
 
 /*
@@ -22,6 +23,9 @@ Route::get('/', function () {
 });
 Route::get('/home', function () {
     return view('home' );
+});
+Route::get('/table', function () {
+    return view('table');
 });
 Route::get('/register', function () {
     return view('register');
@@ -50,7 +54,7 @@ Route::POST('/upload', function(){
     'created_at' => request('created_at'),
     ]);
    
-    return redirect('/upload');
+    return redirect('/register');
 
 
 });

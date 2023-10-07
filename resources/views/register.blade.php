@@ -41,21 +41,21 @@
             <form  action="upload" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="box-form-signup mb-200">
-                <div class="form-group"><input class="form-control" placeholder="Your name *" name="name" value="{{old('name')}}">
+                <div class="form-group"><input class="form-control" type="text" placeholder="Your name *" name="name" value="{{old('name')}}">
                  @error('name')
                 <div class="form-error">
                    {{$message}}
                   </div>
                  @enderror
                 </div>
-                <div class="form-group"><input class="form-control" placeholder="Your email *"name="email" value="{{old('email')}}">
+                <div class="form-group"><input type="email" class="form-control" placeholder="Your email *"name="email" value="{{old('email')}}">
                  @error('name')
                 <div class="form-error">
                    {{$message}}
                   </div>
                  @enderror
                 </div>
-                <div class="form-group"><input class="form-control" placeholder="Your phone  *"name="email" value="{{old('phone')}}">
+                <div class="form-group"><input class="form-control"type="tel" placeholder="Your phone  *"name="phone" value="{{old('phone')}}">
                  @error('phone')
                 <div class="form-error">
                    {{$message}}
@@ -64,11 +64,11 @@
                 </div>
              
                 <div class="form-group">
-                 <select class="text-lg border-1 "  style="width: 100%; height:50px" placeholder="Your role *" name="title" value="{{old('title')}}" id="">
+                 <select class="text-lg border-1 " type="text"  style="width: 100%; height:50px" placeholder="Your role *" name="title" value="{{old('title')}}" id="">
                   <option value="">Please Select Role</option>
-                <option value="frontend">Frontend</option>
-                <option value="software engineer">Software Engineer</option>
-                 <option value="Product manager">Project Manager</option>
+                <option value="Frontend Enginer">Frontend</option>
+                <option value="Software Engineer">Software Engineer</option>
+                 <option value="Product Designer">Project Manager</option>
                  </select>    
                  @error('title')
                 <div class="form-error">
@@ -76,7 +76,7 @@
                   </div>
                  @enderror
                 </div>
-                <div class="form-group"><input class="form-control" placeholder="Location  *"name="location" value="{{old('location')}}">
+                <div class="form-group"><input class="form-control" type="text" placeholder="Location  *"name="location" value="{{old('location')}}">
                  @error('location')
                 <div class="form-error">
                    {{$message}}
@@ -94,7 +94,7 @@
                 <div>
              
                
-                <div class="form-group"><button class="btn btn-green-full text-heading-6">Continue</button></div>
+                <div class="form-group"><button type="submit" class="btn btn-green-full text-heading-6">Continue</button></div>
                 
               </div>
               </form>
