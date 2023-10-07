@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home' );
 });
+Route::get('/register', function () {
+    return view('register');
+});
 Route::get('/admin', function () {
     $builds = DB::table('build')->get();
     return view('admin', [
