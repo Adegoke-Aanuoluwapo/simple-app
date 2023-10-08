@@ -9,5 +9,5 @@ class build extends Model
 {
     use HasFactory;
     protected $table = 'build';
-    protected $fillable = ['name', 'email', 'phone', 'title', 'location', 'cv'];
+    protected $fillable = ['name', 'email', 'phone', 'title', 'location', 'password', 'cv'];
 }

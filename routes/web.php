@@ -57,6 +57,7 @@ Route::POST('/upload', function(){
   'title' => request('title'),
  'name' => request('name'),
   'location' => request('location'),
+    'password' => request('password'),
     'cv' => request('cv'),
     'updated_at' => request('updated_at'),
     'created_at' => request('created_at'),
@@ -71,4 +72,6 @@ Route::get('/', function() {
     return view('welcome', [
         'builds' => $builds
     ]);
+Route::get('/createUser', 'UploadFile@create');
+Route::post('/createuUser', 'UploadFile@store');
 });

@@ -34,9 +34,9 @@
         <div class="bg-6-opacity-30 pt-90">
           <div class="container">
             <div class="box-signup">
-              <h1 class="text-heading-3 mb-50 text-center">Register to partner with us</h1><a class="btn btn-login-google color-gray-500 text-heading-6 box-shadow-2" href="#"><img class="img-responsive img-middle mr-10" src="assets/imgs/template/icons/Icon-gg-login.svg" alt="Agon"> Sign up with Google</a>
+              <h1 class="text-heading-3 mb-50 text-center">Let&rsquo;s join us</h1><a class="btn btn-login-google color-gray-500 text-heading-6 box-shadow-2" href="#"><img class="img-responsive img-middle mr-10" src="assets/imgs/template/icons/Icon-gg-login.svg" alt="Agon"> Sign up with Google</a>
               <div class="text-center">
-                <div class="mt-40 box-line-throught mb-40"><span class="text-body-text color-gray-500">Register to partner with us</span></div>
+                <div class="mt-40 box-line-throught mb-40"><span class="text-body-text color-gray-500">Or, sign up with your email</span></div>
               </div>
             <form  action="upload" method="POST" enctype="multipart/form-data">
               @csrf
@@ -84,15 +84,6 @@
                  @enderror
                 </div>
                 <div>
-                <div class="form-group"><input class="form-control" type="password" placeholder="Enter a password  *" name="password" value="{{old('password')}}">
-                 @error('password')
-                <div class="form-error">
-                   {{$message}}
-                  </div>
-                 @enderror
-                </div>
-                <div>
-                  <div>
                 <div class="form-group"><input class="form-control" type="file" placeholder="Select a File  *" name="cv" value="{{old('cv')}}">
                  @error('cv')
                 <div class="form-error">

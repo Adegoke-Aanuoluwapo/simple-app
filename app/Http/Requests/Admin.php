@@ -22,9 +22,18 @@ class Admin extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'rquired|string|max:56',
-            'password' => 'rquired|email|unique',
+            'email' => 'rquired|email|users',
+            'name' => 'rquired|string|max:50',
+            'password' => 'rquired|confirmed|max:6',
 
-        ]
+        ];
+    }
+    public function message()
+    {
+        return [
+            'email.required' => 'Email is required',
+            'name.required' => 'Name is required',
+            'password.required' => 'Password is required'
+        ];
     }
 }
