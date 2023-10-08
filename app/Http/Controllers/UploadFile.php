@@ -24,10 +24,19 @@ class UploadFile extends Controller
     return view('createUser');
    }
 
-   public function store($Admin $request){
-    $validated = $request->validated();
+   public function store(Admin $request){
+    $validated = $request->validated(['email', 'name', 'password']);
     if($validated){
         return back()->with('success', 'User created successfully');
     }
+   }
+   public function Login(Request $request)
+   {
+    $validatedData = $request->validate(['email'-> 'required|email', 
+    'password'-> 'required|min:6|max:12'
+]);
+    $email = $request->input('email');
+    $password = $request->input('password');
+    return 'Email : '.$email . 'Password: '.$password;
    }
 }

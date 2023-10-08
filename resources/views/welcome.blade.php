@@ -214,6 +214,7 @@
               
               </div>
             </div>
+            <div style="display:grid">
               <div class="media-block">
                   <a
                     class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
@@ -222,7 +223,17 @@
                   >
                  
                   </div>
-                </div>
+              </div>
+              <div class="media-block">
+                  <a
+                    class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
+                    href="login" style="margin-left: 400px"
+                    >Login</a
+                  >
+                 
+                  </div>
+              </div>
+              </div>
           </div>
         </div>
       </section>
