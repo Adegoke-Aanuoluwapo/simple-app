@@ -27,9 +27,7 @@ Route::get('/home', function () {
 Route::get('/table', function () {
     return view('table');
 });
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/register',[UploadFile::class, 'reg']);
 Route::get('/admin', function () {
     $builds = DB::table('build')->get();
     return view('admin', [
@@ -49,6 +47,8 @@ Route::get('/table', function () {
 Route::get('/upload', function () {
     return view('upload'  );
 });
+Route::get('/login', [UploadFile::class, 'log']);
+Route::POST('/login', [UploadFile::class, 'log']);
 
 Route::POST('/upload', function(){
     build::create([

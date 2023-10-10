@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\build;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin;
+use Illuminate\Support\Facades\Auth;
 
 class UploadFile extends Controller
 {
@@ -32,11 +33,23 @@ class UploadFile extends Controller
    }
    public function Login(Request $request)
    {
-    $validatedData = $request->validate(['email'-> 'required|email', 
-    'password'-> 'required|min:6|max:12'
+   $request->validate([
+    'email'=> "required|email", 
+    'password'=> "required|min:6|max:12",
 ]);
-    $email = $request->input('email');
-    $password = $request->input('password');
-    return 'Email : '.$email . 'Password: '.$password;
+    $credentials = $request->only( 'email', 'password');
+    if(Auth::attempt($credentials)){
+        return redirect()->intended(route( 'table'));
+    }
+    return redirect(route( 'login'))->width('error', 'login details are not valid');
+  
+   }
+   function log(){
+        return view('login');
+   }
+   function reg(){
+        return view('register');
+
+
    }
 }
