@@ -1,11 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UploadFile;
 use App\Models\build;
-use App\Http\Controllers\Register;
-use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,59 +18,44 @@ use Illuminate\Support\Facades\Facade;
 */
 
 Route::get('/', function () {
-    return view('welcome' );
+    return view('welcome');
 });
-Route::get('/home', function () {
-    return view('home' );
-});
-Route::get('/table', function () {
-    return view('table');
-});
-Route::get('/register',[UploadFile::class, 'reg']);
-Route::get('/admin', function () {
+Route::get('/signup', [UploadFile::class, 'signup']);
+
+Route::get('/dashboard', function () {
     $builds = DB::table('build')->get();
-    return view('admin', [
-        
+    return view('dashboard', [
         'builds' => $builds
-
     ]);
-});
-Route::get('/table', function () {
-    $builds = DB::table('build')->get();
-    return view('table', [
-
-        'builds' => $builds
-
-    ]);
-});
-Route::get('/upload', function () {
-    return view('upload'  );
-});
-Route::get('/login', [UploadFile::class, 'log']);
-Route::POST('/login', [UploadFile::class, 'log']);
-
-Route::POST('/upload', function(){
+})->middleware(['auth', 'verified'])->name('dashboard');
+Route::POST('/upload', function () {
+    $fileName = "";
+    if (request()->hasFile('cv')) {
+        $file = request()->file('cv');
+        $fileName = $file->hashName();
+        $destinationPath = public_path() . '/uploads';
+        $file->move($destinationPath, $fileName);
+    }
     build::create([
         'email' => request('email'),
-   'phone' => request('phone'),
-  'title' => request('title'),
- 'name' => request('name'),
-  'location' => request('location'),
-    'password' => request('password'),
-    'cv' => request('cv'),
-    'updated_at' => request('updated_at'),
-    'created_at' => request('created_at'),
+        'phone' => request('phone'),
+        'title' => request('title'),
+        'name' => request('name'),
+        'location' => request('location'),
+        
+        'cv' => $fileName,
+        'updated_at' => request('updated_at'),
+        'created_at' => request('created_at'),
     ]);
-   
-    return redirect('/register');
 
 
+    return redirect('/signup');
 });
-Route::get('/', function() {
-    $builds = DB::table('build')->get();
-    return view('welcome', [
-        'builds' => $builds
-    ]);
-Route::get('/createUser', 'UploadFile@create');
-Route::post('/createuUser', 'UploadFile@store');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+require __DIR__ . '/auth.php';

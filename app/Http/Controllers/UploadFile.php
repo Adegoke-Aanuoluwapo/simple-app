@@ -16,6 +16,8 @@ class UploadFile extends Controller
     function getData(){
         return 'form data will be here';
     }
+
+    
     public function index(){
         $builds = build::all();
         return view('admin', compact('build'));
@@ -31,25 +33,7 @@ class UploadFile extends Controller
         return back()->with('success', 'User created successfully');
     }
    }
-   public function Login(Request $request)
-   {
-   $request->validate([
-    'email'=> "required|email", 
-    'password'=> "required|min:6|max:12",
-]);
-    $credentials = $request->only( 'email', 'password');
-    if(Auth::attempt($credentials)){
-        return redirect()->intended(route( 'table'));
-    }
-    return redirect(route( 'login'))->width('error', 'login details are not valid');
-  
-   }
-   function log(){
-        return view('login');
-   }
-   function reg(){
-        return view('register');
-
-
-   }
+function signup(){
+    return view('signup');
+}
 }

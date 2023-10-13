@@ -83,14 +83,7 @@
                   </div>
                  @enderror
                 </div>
-                <div>
-                <div class="form-group"><input class="form-control" type="password" placeholder="Enter a password  *" name="password" value="{{old('password')}}">
-                 @error('password')
-                <div class="form-error">
-                   {{$message}}
-                  </div>
-                 @enderror
-                </div>
+               
                 <div>
                   <div>
                 <div class="form-group"><input class="form-control" type="file" placeholder="Select a File  *" name="cv" value="{{old('cv')}}">

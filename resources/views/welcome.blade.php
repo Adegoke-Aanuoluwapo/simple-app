@@ -80,7 +80,7 @@
                 </h1>
                 <div class="breadcrumbs">
                   <ul class="text-body-text">
-                    <li><a class="color-gray-900" href="#">Home</a></li>
+                    <li><a class="color-gray-900" href="#">Dashboard</a></li>
                     <li><span class="color-gray-500">Jobs details</span></li>
                   </ul>
                 </div>
