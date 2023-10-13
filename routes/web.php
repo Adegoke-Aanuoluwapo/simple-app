@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UploadFile;
+use App\Http\Controllers\MailController;
 use App\Models\build;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/mail', [MailController::class, 'sendMail']
+);
 Route::get('/signup', [UploadFile::class, 'signup']);
 
 Route::get('/dashboard', function () {
