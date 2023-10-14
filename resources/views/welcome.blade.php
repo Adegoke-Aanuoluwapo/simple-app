@@ -39,14 +39,42 @@
     <div class="header-top header-top-green">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 d-none d-md-block">
-            <span>66 avenue des Champs, 75008, Paris, France</span>
-          </div>
+      
           <div class="col-lg-6 col-md-6 text-end">
-            <a class="text-body-text line-right" href="#">(+01) - 456 789</a
-            ><a class="text-body-text" href="mailto:contact@agon.com"
-              >contact@agon.com</a
-            >
+              <div class="dropdown">
+  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Admin
+  </button>
+  <ul class="dropdown-menu btn btn-green-900 color-white text-heading-6 icon-arrow">
+    <li><a class="dropdown-item" href="register">Register</a></li>
+    <li><a class="dropdown-item" href="login">Login</a></li>
+  </ul>
+</div>
+        
+  <div class="dropdown">
+  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Employee
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+            <div style="margin-left:150px">
+
+            <a
+                    class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
+                    href="register" 
+                    >Apply Now</a
+                  >
+                 
+              <a
+                    class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
+                    href="login" 
+                    >Login</a
+                  >
+               </div>     
           </div>
         </div>
       </div>
@@ -218,7 +246,7 @@
               <div class="media-block">
                   <a
                     class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
-                    href="register" style="margin-left: 400px"
+                    href="register" 
                     >Apply Now</a
                   >
                  
@@ -227,7 +255,7 @@
               <div class="media-block">
                   <a
                     class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
-                    href="login" style="margin-left: 400px"
+                    href="login" 
                     >Login</a
                   >
                  

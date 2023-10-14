@@ -34,8 +34,8 @@
                             <th class="column-title">Email </th>
                             <th class="column-title">Phone </th>
                             <th class="column-title">Title </th>
-                            <th class="column-title">Status </th>
-                            <th class="column-title">Amount </th>
+                            <th class="column-title">Location </th>
+                            <th class="column-title">resumee </th>
                             <th class="column-title no-link last"><span class="nobr">Action</span>
                             </th>
                             <th class="bulk-actions" colspan="7">
@@ -54,8 +54,9 @@
                             <td class=" ">{{$build->email}} </td>
                             <td class=" ">{{$build->phone}} <i class="success fa fa-long-arrow-up"></i></td>
                             <td class=" "> {{$build->title}} </td>
-                            <td class=" ">{{$build->cv}} </td>
-                            <td class="a-right a-right ">$7.45</td>
+                            <td class="a-right a-right "> {{$build->location}}</td>
+                            <td class=" "><a href="{{$build->cv}}">CV</a> </td>
+                            
                             <td class=" ">
                               <a class ="btn btn-danger" type="submit" href="#">Delete</a>
                               <a class ="btn btn-primary" type="submit" href="#">Accept</a>
