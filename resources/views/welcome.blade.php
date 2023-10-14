@@ -41,31 +41,14 @@
         <div class="row">
       
           <div class="col-lg-6 col-md-6 text-end">
-              <div class="dropdown">
-  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Admin
-  </button>
-  <ul class="dropdown-menu btn btn-green-900 color-white text-heading-6 icon-arrow">
-    <li><a class="dropdown-item" href="register">Register</a></li>
-    <li><a class="dropdown-item" href="login">Login</a></li>
-  </ul>
-</div>
+ 
         
-  <div class="dropdown">
-  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Employee
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Link 1</a></li>
-    <li><a class="dropdown-item" href="#">Link 2</a></li>
-    <li><a class="dropdown-item" href="#">Link 3</a></li>
-  </ul>
-</div>
+
             <div style="margin-left:150px">
 
             <a
                     class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
-                    href="register" 
+                    href="signup" 
                     >Apply Now</a
                   >
                  
@@ -123,7 +106,7 @@
             <div class="row">
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
-                <h2 class="text-heading-4">Job Description</h2>
+                <h2 class="text-heading-4">Build</h2>
                 <p class="text-body-text">
                   The AliStudio Design team has a vision to establish a trusted
                   platform that enables productive and healthy enterprises in a
@@ -161,7 +144,7 @@
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
                 <h2 class="text-heading-4">
-                  Essential Knowledge, Skills, and Experience
+                 Earn
                 </h2>
                 <ul>
                   <li>
@@ -197,7 +180,7 @@
                 </ul>
                 <p></p>
                 <h2 class="text-heading-4">
-                  Essential Knowledge, Skills, and Experience
+                 Benefit
                 </h2>
                 <ul>
                   <li>
@@ -215,7 +198,7 @@
                 </ul>
                 <p></p>
                 <h2 class="text-heading-4">
-                  Essential Knowledge, Skills, and Experience
+                Reward
                 </h2>
                 <p>
                   Product knowledge: Deeply understand the technology and
@@ -246,7 +229,7 @@
               <div class="media-block">
                   <a
                     class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
-                    href="register" 
+                    href="signup" 
                     >Apply Now</a
                   >
                  

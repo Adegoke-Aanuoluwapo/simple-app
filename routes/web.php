@@ -38,6 +38,10 @@ Route::POST('/upload', function () {
         $fileName = $file->hashName();
         $destinationPath = public_path() . '/uploads';
         $file->move($destinationPath, $fileName);
+
+        
+
+
     }
     build::create([
         'email' => request('email'),
@@ -54,6 +58,9 @@ Route::POST('/upload', function () {
 
     return redirect('/signup');
 });
+Route::get('/displaycv', [UploadFile::class, 
+
+'displayTextFile']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

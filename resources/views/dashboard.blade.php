@@ -55,11 +55,11 @@
                             <td class=" ">{{$build->phone}} <i class="success fa fa-long-arrow-up"></i></td>
                             <td class=" "> {{$build->title}} </td>
                             <td class="a-right a-right "> {{$build->location}}</td>
-                            <td class=" "><a href="{{$build->cv}}">CV</a> </td>
+                            <td class=" "><a href="{{('displaycv')}}">CV</a> </td>
                             
                             <td class=" ">
-                              <a class ="btn btn-danger" type="submit" href="#">Delete</a>
-                              <a class ="btn btn-primary" type="submit" href="#">Accept</a>
+                              <a class ="btn btn-danger" type="submit" href="Email">Delete</a>
+                              <a class ="btn btn-primary" type="submit" href="Email">Accept</a>
                             </td>
                           </tr>
                       @endforeach

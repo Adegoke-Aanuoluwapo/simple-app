@@ -36,4 +36,25 @@ class UploadFile extends Controller
 function signup(){
     return view('signup');
 }
+function displayCV(){
+        $fileContents = file_get_contents('my-file.txt');
+}
+
+    function displayTextFile($filePath)
+    {
+        if (file_exists($filePath) && is_readable($filePath)) {
+            // Set the content type to plain text
+            header('Content-Type: text/plain');
+
+            // Output the file contents
+            echo file_get_contents($filePath);
+        } else {
+            echo "The file doesn't exist or is not readable.";
+        }
+        $filePath = public_path() . '/uploads';
+
+        return view('displaycv', [$filePath]);
+      
+    }
+    
 }
