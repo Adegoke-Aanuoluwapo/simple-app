@@ -16,6 +16,8 @@ class Email extends Mailable
     /**
      * Create a new message instance.
      */
+
+     public $name;
     public function __construct()
     {
         //
@@ -51,8 +53,8 @@ class Email extends Mailable
         return [];
     }
 
-    public functio  build()
+    public function  build()
     {
-        return $this->view('EmailView');
+        return $this->view('Email');
     }
 }
