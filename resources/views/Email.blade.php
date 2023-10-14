@@ -1,1 +1,1 @@
-Send mail here
+Send mail here {{ $name }}

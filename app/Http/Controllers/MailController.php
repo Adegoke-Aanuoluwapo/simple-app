@@ -9,7 +9,7 @@ use Illuminate\Contracts\Mail\Mailable;
 
 class MailController extends Controller
 {
-    function sendMail(){
+    function sendMail($name){
         $name = 'Aanuoluwapo';
         Mail::to('fake@mail.com')->send(new Email($name));
         return view('Email');

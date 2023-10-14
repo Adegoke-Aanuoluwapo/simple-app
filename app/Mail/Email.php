@@ -12,12 +12,12 @@ use Illuminate\Queue\SerializesModels;
 class Email extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $name;
     /**
      * Create a new message instance.
      */
 
-     public $name;
+     
     public function __construct($name)
     {
         $this->name  = $name;
