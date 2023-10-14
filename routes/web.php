@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/mail', [MailController::class, 'sendMail']
+Route::get('/Email', [MailController::class, 'sendMail']
 );
 Route::get('/signup', [UploadFile::class, 'signup']);
 
