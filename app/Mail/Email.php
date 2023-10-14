@@ -50,4 +50,9 @@ class Email extends Mailable
     {
         return [];
     }
+
+    public functio  build()
+    {
+        return $this->view('EmailView');
+    }
 }
