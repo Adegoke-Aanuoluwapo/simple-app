@@ -55,7 +55,7 @@
                             <td class=" ">{{$build->phone}} <i class="success fa fa-long-arrow-up"></i></td>
                             <td class=" "> {{$build->title}} </td>
                             <td class="a-right a-right "> {{$build->location}}</td>
-                            <td class=" "><a href="{{('displaycv')}}">CV</a> </td>
+                            <td class=" "><a href="{{url('/view', $build->id)}}">View CV</a> </td>
                             
                             <td class=" ">
                               <a class ="btn btn-danger" type="submit" href="Email">Delete</a>

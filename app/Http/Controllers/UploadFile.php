@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\build;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin;
+
+
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UploadFile extends Controller
 {
@@ -35,26 +38,16 @@ class UploadFile extends Controller
    }
 function signup(){
     return view('signup');
-}
+} 
 function displayCV(){
         $fileContents = file_get_contents('my-file.txt');
 }
 
-    function displayTextFile($filePath)
-    {
-        if (file_exists($filePath) && is_readable($filePath)) {
-            // Set the content type to plain text
-            header('Content-Type: text/plain');
-
-            // Output the file contents
-            echo file_get_contents($filePath);
-        } else {
-            echo "The file doesn't exist or is not readable.";
-        }
-        $filePath = public_path() . '/uploads';
-
-        return view('displaycv', [$filePath]);
+    
+   public function view($id){
       
+        $build = build::find($id);
+        return view('displaycv', compact('build'));
     }
     
 }

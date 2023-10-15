@@ -58,9 +58,9 @@ Route::POST('/upload', function () {
 
     return redirect('/signup');
 });
-Route::get('/displaycv', [UploadFile::class, 
+Route::get('/view/{id}', [UploadFile::class, 
 
-'displayTextFile']);
+'view']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
