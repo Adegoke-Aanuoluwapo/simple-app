@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\DB;
 class Email extends Mailable
 {
     use Queueable, SerializesModels;
-    public $name;
+    public $build = [];
     /**
      * Create a new message instance.
      */
 
      
-    public function __construct($name)
+    public function __construct($build)
     {
-        $this->name  = $name;
+        $this->build  = $build;
     }
 
     /**
@@ -57,6 +57,6 @@ class Email extends Mailable
 
     public function  build()
     {
-        return $this->view('Email');
+        return $this->from('Aanummaculate@gmail.com', 'Project builder')->subject($this->build['subject'])->view('Email')->with('build', $this->build);
     }
 }
