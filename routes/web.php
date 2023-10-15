@@ -36,6 +36,7 @@ Route::POST('/upload', function () {
     if (request()->hasFile('cv')) {
         $file = request()->file('cv');
         $fileName = $file->hashName();
+        // $fileName =time(). '.'. $file->getClientOriginalExtension();
         $destinationPath = public_path() . '/uploads';
         $file->move($destinationPath, $fileName);
 

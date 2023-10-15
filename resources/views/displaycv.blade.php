@@ -21,7 +21,7 @@
       {{$build->name}}
         {{$build->location}}
 
-        <iframe height="400px" width="400px" src="/uploads/{{$build->cv}}"></iframe>
+        <iframe height="800" width="800" src="/uploads/{{$build->cv}}"></iframe>
 
 
   </body>
