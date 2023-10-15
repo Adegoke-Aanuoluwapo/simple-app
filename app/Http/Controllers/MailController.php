@@ -19,8 +19,8 @@ class MailController extends Controller
         {
             Mail::to('Aanummaculate@gmial.com')->send(new Email($build));
             return response()->json(["Great check your mail box"]);
-        }catch(Exception $build){
-            return response()->json(["Sorry simething went wrong"]);
+        }catch(Exception $th){
+            return response()->json(["Sorry something went wrong"]);
         }
     }
 }
