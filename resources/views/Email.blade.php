@@ -8,6 +8,6 @@
 </head>
 <body>
  <h3>Delivery Email </h3>
- <p>{{$build['name']}}</p>
+ <p>{{$build['subject']}}</p>
 </body>
 </html>

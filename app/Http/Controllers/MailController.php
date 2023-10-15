@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Email;
 
@@ -14,5 +15,12 @@ class MailController extends Controller
             'subject'=>'Builder Academy',
             'body'=> 'Hello you have been booked for interview',
         ];
+        try
+        {
+            Mail::to('Aanummaculate@gmial.com')->send(new Email($build));
+            return response()->json(["Great check your mail box"]);
+        }catch(Exception $build){
+            return response()->json(["Sorry simething went wrong"]);
+        }
     }
 }
