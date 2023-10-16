@@ -49,5 +49,13 @@ function displayCV(){
         $build = build::find($id);
         return view('displaycv', compact('build'));
     }
+    function remove($id){
+       DB::delete("DELETE FROM build WHERE id = ?", [$id]);
+            // $build = build::find($id);
+            // $build-> delete();
+        
+        return redirect('dashboard')->with('status', 'Data deleted Successfully'); 
+
+    }
     
 }

@@ -24,6 +24,7 @@ Route::get('/', function () {
 Route::get('/Email', [MailController::class, 'sendMail']
 );
 Route::get('/signup', [UploadFile::class, 'signup']);
+Route::get('/delete/{id}', [UploadFile::class, 'remove']);
 
 Route::get('/dashboard', function () {
     $builds = DB::table('build')->get();

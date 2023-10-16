@@ -58,7 +58,7 @@
                             <td class=" "><a href="{{url('/view', $build->id)}}">View CV</a> </td>
                             
                             <td class=" ">
-                              <a class ="btn btn-danger" type="submit" href="Email">Delete</a>
+                              <a class ="btn btn-danger" type="submit" href="/delete/{{$build->id}}">Delete</a>
                               <a class ="btn btn-primary" type="submit" href="Email">Accept</a>
                             </td>
                           </tr>
