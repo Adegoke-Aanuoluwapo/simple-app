@@ -229,20 +229,13 @@
               <div class="media-block">
                   <a
                     class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
-                    href="signup" 
-                    >Apply Now</a
+                    href="register" 
+                    >Admin</a
                   >
                  
                   </div>
               </div>
-              <div class="media-block">
-                  <a
-                    class="btn btn-green-900 color-white text-heading-6 icon-arrow-right-white mr-20"
-                    href="login" 
-                    >Login</a
-                  >
-                 
-                  </div>
+             
               </div>
               </div>
           </div>
